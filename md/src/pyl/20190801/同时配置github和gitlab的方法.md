@@ -1,11 +1,11 @@
 
-#**背景**
+# 背景
     公司的代码是托管在gitlab上，同时我们还想访问github管理自己的项目代码，此时就需要配置了
-#**思路**
+# 思路
 	1、在~/.ssh/下生成两个本地秘钥文件（github:id_rsa_self;gitlab:id_rsa_company）
 	2、新增一个配置文件config
 	3、将本地秘钥拷贝到不同的平台SSH-key的配置中
-#**步骤**
+# 步骤
 	1、生成秘钥
 	#在~/.ssh/目录会生成id_rsa_company和id_rsa_company.pub私钥和公钥。
 	#后面将id_rsa_company.pub中的内容粘帖到公司GitLab服务器的SSH-key的配置中。
