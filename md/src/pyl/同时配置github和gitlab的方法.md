@@ -7,7 +7,7 @@
 	3、将本地秘钥拷贝到不同的平台SSH-key的配置中
 # 步骤
 	1、生成秘钥
-	#在~/.ssh/目录会生成id_rsa_company和id_rsa_company.pub私钥和公钥。
+	#在~/.ssh/目录会生成id_rsa_company和id_rsa_self私钥和公钥。
 	#后面将id_rsa_company.pub中的内容粘帖到公司GitLab服务器的SSH-key的配置中。
 	$ ssh-keygen -t rsa -C "注册gitlab邮箱" -f ~/.ssh/id_rsa_company
 	$ ssh-keygen -t rsa -C "注册github邮箱" -f ~/.ssh/id_rsa_self
@@ -33,9 +33,9 @@
 		IdentityFile ~/.ssh/id_rsa_company
 	3、测试
 	# 测试github
-    $ ssh -T git@github.com
+    	$ ssh -T git@github.com
     
-    # 测试gitlab
+    	# 测试gitlab
 	$ ssh -T git@gitlab.com
 	注意：The authenticity of host 'git.blingabc.com (120.27.12.76)' can't be established.
 	ECDSA key fingerprint is SHA256:qopHbX8WJMeXPn8U9dkfwH/6yc9b9eCMxOaU6eDQMVE.
